@@ -1,0 +1,47 @@
+Что должен включать в себя сайт:
+  фото портфолио 
+  биографическую информацию
+  контакты
+
+
+
+1. Дизайн
+  header
+  
+  menu
+  
+  content
+  
+  footer
+  
+  about
+  
+  contacts
+    http://www.ericryananderson.com/info
+    
+  форма обратной связи
+    https://www.stanseatonphotography.co.uk/contact/
+
+2. Функционал
+  Переключалка языка?
+  Нужен ли блог?
+    примеры:
+      http://blog.stanseatonphotography.co.uk
+      https://cmarie-photo.com/blog/ (круто появляются темы)
+
+3. Прочее
+  - плавное смена фото(через opacity)
+  - интересное переключение между фото(https://www.nickonken.com/STILLS/LIFESTYLE/9)
+  - прикольно появляются альбомы(https://www.stanseatonphotography.co.uk/weddings/weddings-gallery/)
+  - эффекты при наведении(http://worldinmylens.com)
+  - крутой эффект наведения(http://www.nicolastarierphotography.com/)
+  
+4. Возможные шрифты:
+  https://www.stanseatonphotography.co.uk
+  
+  
+Тех. вопросы:
+  1. Как выводить прогресс бар, пока грузится фото?
+  
+Классный дизайн:
+  https://www.stanseatonphotography.co.uk/  

@@ -1,0 +1,61 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700';
+@font-face {
+  font-family: 'logo';
+  src: url("../fonts/logoFont.otf"); }
+
+.flexCenter, header .wrapMenu .logo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex, header .wrapMenu {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex; }
+
+.flexSA, header .wrapMenu .wrap, header .wrapMenu .wrap .menu, header .wrapMenu .wrap .social {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-around; }
+
+body {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%; }
+
+header .wrapMenu {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #706d6b;
+  font-weight: 100; }
+  header .wrapMenu a {
+    text-decoration: none; }
+  header .wrapMenu .logo {
+    font-family: "logo";
+    font-size: 45px;
+    color: black;
+    font-weight: 700;
+    margin: 25px 25px 25px 50px; }
+  header .wrapMenu a:hover {
+    text-decoration: none; }
+  header .wrapMenu .wrap {
+    align-items: center;
+    flex: 100%; }
+    header .wrapMenu .wrap .social a {
+      color: #706d6b;
+      font-size: 16px;
+      margin: 0 7px; }
+    header .wrapMenu .wrap .social a:hover {
+      text-decoration: none; }
+    header .wrapMenu .wrap div {
+      margin: 0 15px; }

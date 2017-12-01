@@ -11,7 +11,8 @@ var gulp = require('gulp'),
 var config = {
     src: {
         pug: './source/pug/**/*.pug',
-        sass: './source/sass/**/*.sass',
+        sass: './source/sass/main/*.sass',
+        sassWatch: './source/sass/**/*.sass',
         js: './source/js/**/*.js',
         img: './source/img/**/*',
     },
@@ -67,7 +68,7 @@ gulp.task('img', function() {
 
 gulp.task('watch', function() {
 //    gulp.watch(config.src.pug, ['pug']);
-    gulp.watch(config.src.sass, ['sass']);
+    gulp.watch(config.src.sassWatch, ['sass']);
     gulp.watch(config.src.js, ['js']);
     gulp.watch(config.src.img, ['img']);
 });

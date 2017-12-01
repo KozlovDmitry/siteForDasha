@@ -1,0 +1,43 @@
+body
+  padding: 0
+  margin: 0
+  float: left
+  width: 100%
+  
+header
+  .wrapMenu
+    @extend .flex
+    +font('Roboto', 16px, #706d6b, 100)
+      
+    a
+      text-decoration: none
+      
+    .logo
+      @extend .flexCenter
+      +font('logo', 45px, black, 700)
+      margin: 25px 25px 25px 50px
+      
+    a:hover
+      text-decoration: none
+      
+    .wrap 
+      @extend .flexSA
+      align-items: center
+      flex: 100%
+      
+      .menu 
+        @extend .flexSA
+        
+      .social 
+        @extend .flexSA
+        
+        a
+          color: #706d6b
+          font-size: 16px
+          margin: 0 7px
+          
+        a:hover
+          text-decoration: none
+        
+      div
+        margin: 0 15px

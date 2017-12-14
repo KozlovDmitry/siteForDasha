@@ -1,0 +1,81 @@
+section 
+  @extend .flexCenter
+  padding: 50px 100px
+  font-family: $mainFont, serif
+  color: #706d6b
+  
+.weddingSection
+  flex-direction: column
+  padding: 50px 200px
+  
+  .wrap
+    @extend .flexCenter
+    flex-direction: column
+  
+    h2
+      font-weight: 400
+
+    .text
+      font-weight: 100
+      line-height: 1.5em
+
+    a
+      text-decoration: none
+      +font($mainFont, 18px, #706d6b, 400)
+      position: relative
+    
+    a:before
+      content: ''
+      position: absolute
+      height: 2px
+      width: 0
+      bottom: -3px
+      right: 0
+      transition: .6s
+      background-color: #706d6b
+      
+    a:hover:before
+      width: 100%
+      left: 0
+    
+.aboutSection
+  .wrap
+    @extend .flexSA
+    background-color: #f8f8f8
+    align-items: center
+    padding: 50px 0
+    
+    .info 
+      @extend .flexCenter
+      flex-direction: column
+      width: 40%
+      font-weight: 100
+      line-height: 1.5em
+      
+      a
+        text-decoration: none
+        +font($mainFont, 18px, #706d6b, 400)
+        position: relative
+
+      a:before
+        content: ''
+        position: absolute
+        height: 2px
+        width: 0
+        bottom: -3px
+        right: 0
+        transition: .6s
+        background-color: #706d6b
+
+      a:hover:before
+        width: 100%
+        left: 0
+      
+      h2
+        font-weight: 400
+      
+    .photo
+      background: url('../img/about/about.jpg') no-repeat center
+      background-size: cover
+      width: 350px
+      height: 550px

@@ -1,0 +1,112 @@
+body
+  padding: 0
+  margin: 0
+  float: left
+  width: 100%
+  
+  
+header
+  position: relative
+  overflow: hidden
+  
+  .wrapMenu
+    @extend .flex
+    +font($mainFont, 16px, #706d6b, 100)
+    background-color: rgba(255, 255, 255, .5)
+    align-items: center
+      
+    a
+      text-decoration: none
+      
+    .logo
+      @extend .flexCenter
+      +font('logo', 45px, black, 700)
+      margin: 25px 25px 25px 50px
+      transition: .6s
+      
+    .logo:hover
+      color: #dc6f26
+      transform: scale(1.1)
+      
+    a:hover
+      text-decoration: none
+      
+    .wrap 
+      @extend .flexSA
+      align-items: center
+      flex: 1
+      align-self: stretch
+      
+      .menu 
+        @extend .flexSA
+        justify-content: space-evenly
+        flex: .9
+        align-self: stretch
+        
+        a
+          @extend .flex
+          justify-content: center
+          align-items: center
+          align-self: stretch
+          flex-grow: 1
+          transition: .5s ease
+          z-index: 2
+          cursor: pointer
+          
+        a:visited
+          color: #706d6b
+        
+        a:hover
+          box-shadow: 0 0 10px 1px #706d6b
+        
+      .social 
+        @extend .flexSA
+        display: none
+        
+        a
+          color: #706d6b
+          font-size: 16px
+          margin: 0 7px
+          
+        a:hover
+          text-decoration: none
+        
+      div
+        margin: 0 15px
+        text-align: center
+        @extend .flexCenter
+        
+    .langWrap
+      @extend .flexSA
+      position: relative
+      font-weight: 400
+      border: thin solid
+      border-radius: 20px
+      margin-right: 20px
+      z-index: 2
+      cursor: pointer
+
+      div
+        margin: 3px 12px
+
+      .carrier 
+        position: absolute
+        left: -11px
+        top: -2px
+        background-color: rgba(100, 100, 100, .4)
+        height: 23px
+        width: 77px
+        border-radius: 15px
+        transition: .6s
+        
+  .headerText 
+    @extend .flexCenter
+    +font('logo', 55px, black, 700)
+    transform: rotate(-30deg)
+    padding: 15%
+    text-shadow: 0 0 2px #9c9a98
+    overflow: hidden
+    
+  .russian
+    opacity: 0
+  

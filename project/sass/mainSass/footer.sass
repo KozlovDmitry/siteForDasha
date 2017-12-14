@@ -1,0 +1,98 @@
+footer
+  @extend .flexCenter
+  flex-direction: column
+  +font($mainFont, 16px, #706d6b, 100)
+  align-items: stretch
+    
+  .followSection
+    @extend .flexCenter
+    padding: 50px 0
+    
+    .wrap
+      @extend .flexCenter
+      flex-direction: column
+      
+      h2
+        font-weight: 400
+        
+      a
+        +font($mainFont, 18px, #706d6b, 100)
+        text-decoration: none
+        position: relative
+        
+      a:before
+        content: ''
+        position: absolute
+        height: 1px
+        width: 0
+        bottom: -4px
+        right: 0
+        transition: .6s
+        background-color: #706d6b
+
+      a:hover:before
+        width: 100%
+        left: 0
+  
+  .infoSocial
+    @extend .flex
+    background-color: #f8f8f8
+    flex-direction: column
+    padding: 0 50px
+    align-items: stretch
+  
+    .wrapInfoSocial
+      @extend .flex  
+      justify-content: space-between
+      
+      a
+        text-decoration: none
+
+      .logo
+        @extend .flexCenter
+        +font('logo', 45px, black, 700)
+        margin: 25px 0
+        transition: .6s
+        
+      .logo:hover
+        color: #dc6f26
+        transform: scale(1.1)
+
+      a:hover
+        text-decoration: none
+      
+      .wrapInfo
+        @extend .flexCenter
+        
+        div
+          @extend .flexCenter
+          font-size: 16px
+          margin: 0 10px
+          
+          .dot
+            margin: 0
+            height: 4px
+            width: 4px
+            background-color: #706d6b
+            margin: 0 5px
+            border-radius: 50%
+      
+      .social 
+        @extend .flexCenter
+
+        a
+          color: #706d6b
+          font-size: 18px
+          margin: 0 10px
+          transition: .6s
+
+        a:hover
+          text-decoration: none
+          color: #dc6f26
+        
+    .wrapCopyRight
+      @extend .flexCenter
+      padding: 20px 0
+      font-size: 9px
+      
+  

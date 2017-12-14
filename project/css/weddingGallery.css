@@ -1,0 +1,261 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700';
+@font-face {
+  font-family: 'logo';
+  src: url("../fonts/logoFont.otf"); }
+
+@font-face {
+  font-family: 'logo2';
+  src: url("../fonts/logoFont2.ttf"); }
+
+.flexCenter, header .wrapMenu .logo, header .wrapMenu .wrap div, header .headerText, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex, header .wrapMenu, header .wrapMenu .wrap .menu a, .main, .main .wrapAlbums, .main .wrapAlbums .wrapAlbum .wrapText, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex; }
+
+.flexSA, header .wrapMenu .wrap, header .wrapMenu .wrap .menu, header .wrapMenu .wrap .social, header .wrapMenu .langWrap {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-around; }
+
+#invisible {
+  display: none; }
+
+body {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%; }
+
+header {
+  position: relative;
+  overflow: hidden; }
+  header .wrapMenu {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #706d6b;
+    font-weight: 100;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center; }
+    header .wrapMenu a {
+      text-decoration: none; }
+    header .wrapMenu .logo {
+      font-family: "logo";
+      font-size: 45px;
+      color: black;
+      font-weight: 700;
+      margin: 25px 25px 25px 50px;
+      transition: .6s; }
+    header .wrapMenu .logo:hover {
+      color: #dc6f26;
+      transform: scale(1.1); }
+    header .wrapMenu a:hover {
+      text-decoration: none; }
+    header .wrapMenu .wrap {
+      align-items: center;
+      flex: 1;
+      align-self: stretch; }
+      header .wrapMenu .wrap .menu {
+        justify-content: space-evenly;
+        flex: .9;
+        align-self: stretch; }
+        header .wrapMenu .wrap .menu a {
+          justify-content: center;
+          align-items: center;
+          align-self: stretch;
+          flex-grow: 1;
+          transition: .5s ease;
+          z-index: 2;
+          cursor: pointer; }
+        header .wrapMenu .wrap .menu a:visited {
+          color: #706d6b; }
+        header .wrapMenu .wrap .menu a:hover {
+          box-shadow: 0 0 10px 1px #706d6b; }
+      header .wrapMenu .wrap .social {
+        display: none; }
+        header .wrapMenu .wrap .social a {
+          color: #706d6b;
+          font-size: 16px;
+          margin: 0 7px; }
+        header .wrapMenu .wrap .social a:hover {
+          text-decoration: none; }
+      header .wrapMenu .wrap div {
+        margin: 0 15px;
+        text-align: center; }
+    header .wrapMenu .langWrap {
+      position: relative;
+      font-weight: 400;
+      border: thin solid;
+      border-radius: 20px;
+      margin-right: 20px;
+      z-index: 2;
+      cursor: pointer; }
+      header .wrapMenu .langWrap div {
+        margin: 3px 12px; }
+      header .wrapMenu .langWrap .carrier {
+        position: absolute;
+        left: -11px;
+        top: -2px;
+        background-color: rgba(100, 100, 100, 0.4);
+        height: 23px;
+        width: 77px;
+        border-radius: 15px;
+        transition: .6s; }
+  header .headerText {
+    font-family: "logo";
+    font-size: 55px;
+    color: black;
+    font-weight: 700;
+    transform: rotate(-30deg);
+    padding: 15%;
+    text-shadow: 0 0 2px #9c9a98;
+    overflow: hidden; }
+  header .russian {
+    opacity: 0; }
+
+.main {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  flex-direction: column; }
+  .main h1 {
+    font-family: "Roboto";
+    font-size: 30px;
+    color: #706d6b;
+    font-weight: 300;
+    text-align: center;
+    margin: 70px 0; }
+  .main .wrapAlbums {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .main .wrapAlbums .wrapAlbum {
+      margin: 50px; }
+      .main .wrapAlbums .wrapAlbum .wrapPhoto {
+        display: block;
+        overflow: hidden;
+        width: 360px;
+        height: 360px;
+        trasition: .6s; }
+        .main .wrapAlbums .wrapAlbum .wrapPhoto .photo {
+          width: 360px;
+          height: 360px;
+          transition: .6s; }
+          .main .wrapAlbums .wrapAlbum .wrapPhoto .photo .gradient {
+            display: none; }
+        .main .wrapAlbums .wrapAlbum .wrapPhoto .album1 {
+          background: url(../img/wedding/test1/1.jpg) no-repeat center;
+          background-size: cover; }
+        .main .wrapAlbums .wrapAlbum .wrapPhoto .album2 {
+          background: url(../img/wedding/test2/1.jpg) no-repeat center;
+          background-size: cover; }
+      .main .wrapAlbums .wrapAlbum .wrapPhoto:hover .photo {
+        transform: scale(1.1); }
+        .main .wrapAlbums .wrapAlbum .wrapPhoto:hover .photo .gradient {
+          display: block;
+          width: 360px;
+          height: 360px;
+          background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%); }
+      .main .wrapAlbums .wrapAlbum .wrapText {
+        flex-direction: column;
+        background-color: white;
+        padding-bottom: 30px; }
+        .main .wrapAlbums .wrapAlbum .wrapText h2 {
+          font-family: "Roboto";
+          font-size: 18px;
+          color: #706d6b;
+          font-weight: 400;
+          text-align: center; }
+        .main .wrapAlbums .wrapAlbum .wrapText .date {
+          font-family: "Roboto";
+          font-size: 12px;
+          color: #706d6b;
+          font-weight: 300;
+          font-style: italic;
+          text-align: center; }
+
+footer {
+  flex-direction: column;
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #706d6b;
+  font-weight: 100;
+  align-items: stretch; }
+  footer .followSection {
+    padding: 50px 0; }
+    footer .followSection .wrap {
+      flex-direction: column; }
+      footer .followSection .wrap h2 {
+        font-weight: 400; }
+      footer .followSection .wrap a {
+        font-family: "Roboto";
+        font-size: 18px;
+        color: #706d6b;
+        font-weight: 100;
+        text-decoration: none;
+        position: relative; }
+      footer .followSection .wrap a:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 0;
+        bottom: -4px;
+        right: 0;
+        transition: .6s;
+        background-color: #706d6b; }
+      footer .followSection .wrap a:hover:before {
+        width: 100%;
+        left: 0; }
+  footer .infoSocial {
+    background-color: #f8f8f8;
+    flex-direction: column;
+    padding: 0 50px;
+    align-items: stretch; }
+    footer .infoSocial .wrapInfoSocial {
+      justify-content: space-between; }
+      footer .infoSocial .wrapInfoSocial a {
+        text-decoration: none; }
+      footer .infoSocial .wrapInfoSocial .logo {
+        font-family: "logo";
+        font-size: 45px;
+        color: black;
+        font-weight: 700;
+        margin: 25px 0;
+        transition: .6s; }
+      footer .infoSocial .wrapInfoSocial .logo:hover {
+        color: #dc6f26;
+        transform: scale(1.1); }
+      footer .infoSocial .wrapInfoSocial a:hover {
+        text-decoration: none; }
+      footer .infoSocial .wrapInfoSocial .wrapInfo div {
+        font-size: 16px;
+        margin: 0 10px; }
+        footer .infoSocial .wrapInfoSocial .wrapInfo div .dot {
+          margin: 0;
+          height: 4px;
+          width: 4px;
+          background-color: #706d6b;
+          margin: 0 5px;
+          border-radius: 50%; }
+      footer .infoSocial .wrapInfoSocial .social a {
+        color: #706d6b;
+        font-size: 18px;
+        margin: 0 10px;
+        transition: .6s; }
+      footer .infoSocial .wrapInfoSocial .social a:hover {
+        text-decoration: none;
+        color: #dc6f26; }
+    footer .infoSocial .wrapCopyRight {
+      padding: 20px 0;
+      font-size: 9px; }

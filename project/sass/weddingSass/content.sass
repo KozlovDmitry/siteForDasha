@@ -1,0 +1,70 @@
+.main 
+  @extend .flex
+  min-height: 100vh
+  background-color: #f8f8f8
+  flex-direction: column
+  
+  
+  h1
+    +font($mainFont, 30px, #706d6b, 300)
+    text-align: center
+    margin: 70px 0
+    
+  .wrapAlbums
+    @extend .flex
+    flex-wrap: wrap
+    justify-content: center
+    
+    .wrapAlbum
+      margin: 50px
+      
+      .wrapPhoto
+        display: block
+        overflow: hidden
+        width: 360px
+        height: 360px
+        trasition: .6s
+        
+        .photo 
+          width: 360px
+          height: 360px
+          transition: .6s
+            
+          .gradient
+            display: none
+            
+        .album1
+          background: url(../img/wedding/test1/1.jpg) no-repeat center
+          background-size: cover
+          
+        .album2
+          background: url(../img/wedding/test2/1.jpg) no-repeat center
+          background-size: cover
+          
+          
+      .wrapPhoto:hover
+        
+        .photo
+          transform: scale(1.1)
+          
+          .gradient 
+            display: block
+            width: 360px
+            height: 360px
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+          
+          
+      .wrapText 
+        @extend .flex
+        flex-direction: column
+        background-color: white
+        padding-bottom: 30px
+        
+        h2
+          +font($mainFont, 18px, #706d6b, 400)
+          text-align: center
+            
+        .date 
+          +font($mainFont, 12px, #706d6b, 300)
+          font-style: italic
+          text-align: center

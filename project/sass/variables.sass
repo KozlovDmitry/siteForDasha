@@ -1,7 +1,14 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700'
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700'
 @font-face
   font-family: 'logo'
   src: url('../fonts/logoFont.otf')
+@font-face
+  font-family: 'logo2'
+  src: url('../fonts/logoFont2.ttf')
+
+
+$mainFont: 'Roboto'
+
 
 
 .flexCenter
@@ -27,6 +34,9 @@
   display: -o-flex
   display: flex
   justify-content: space-around
+  
+#invisible
+  display: none
 
 =font($ff, $size, $color, $weight)
   font-family: $ff

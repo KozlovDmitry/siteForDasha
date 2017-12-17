@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700';
 @font-face {
   font-family: 'logo';
-  src: url("../fonts/logoFont.otf"); }
+  src: url("../fonts/logoFontTtf.ttf"); }
 
 @font-face {
   font-family: 'logo2';
@@ -51,7 +51,8 @@ header {
     background-color: rgba(255, 255, 255, 0.5);
     align-items: center; }
     header .wrapMenu a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #706d6b; }
     header .wrapMenu .logo {
       font-family: "logo";
       font-size: 45px;

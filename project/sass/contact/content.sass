@@ -1,0 +1,131 @@
+.main 
+  @extend .flex
+  min-height: 100vh
+  background-color: #f8f8f8
+  flex-direction: column
+  
+  
+  h1
+    +font($mainFont, 30px, #706d6b, 300)
+    text-align: center
+    margin-top: 100px
+    margin-bottom: 0
+
+    
+  p
+    +font($mainFont, 14px, #706d6b, 100)
+    text-align: center
+    margin-bottom: 70px
+    
+  .myForm 
+    @extend .flexCenter
+    flex-direction: column
+  
+    .wrapMyForm 
+      @extend .flexCenter
+      align-items: stretch
+
+
+      .wrap 
+        @extend .flex
+        flex-direction: column
+
+        input
+          +font($mainFont, 18px, black, 100)
+          border: none
+          padding: 15px
+          margin: 10px
+          width: 400px
+          background-color: #f8f8f8
+          border: thin solid #706d6b
+          transition: .6s
+          
+        input:focus
+          outline: none
+
+        input:nth-child(1)
+          margin-top: 0
+
+        input:nth-child(4)
+          margin-bottom: 0
+        
+        input::-webkit-input-placeholder
+          opacity: 1
+          transition: .6s
+          color: black
+        input::-moz-placeholder
+          opacity: 1
+          transition: .6s
+          color: black
+        input:-moz-placeholder
+          opacity: 1
+          transition: .6s
+          color: black
+        input:-ms-input-placeholder
+          opacity: 1
+          transition: .6s
+          color: black
+        
+        input:focus::-webkit-input-placeholder
+          opacity: 0
+        input:focus::-moz-placeholder
+          opacity: 0
+        input:focus:-moz-placeholder
+          opacity: 0
+        input:focus:-ms-input-placeholder
+          opacity: 0
+
+      textarea
+        width: 400px
+        border: none
+        +font($mainFont, 18px, black, 100)
+        resize: none
+        padding: 15px
+        margin-right: 10px
+        background-color: #f8f8f8
+        border: thin solid #706d6b
+        
+      textarea::-webkit-input-placeholder
+        color: black
+        transition: .6s
+      textarea::-moz-placeholder
+        color: black
+        transition: .6s
+      textarea:-moz-placeholder
+        color: black
+        transition: .6s
+      textarea:-ms-input-placeholder
+        color: black
+        transition: .6s
+        
+      textarea:focus::-webkit-input-placeholder
+        opacity: 0
+      textarea:focus::-moz-placeholder
+        opacity: 0
+      textarea:focus:-moz-placeholder
+        opacity: 0
+      textarea:focus:-ms-input-placeholder
+        opacity: 0
+      
+      textarea:focus
+        outline: none
+
+
+    button
+      background-color: #f8f8f8
+      +font($mainFont, 18px, black, 100)
+      padding: 15px
+      width: 300px
+      margin: 20px
+      border: none
+      border: thin solid #706d6b
+      cursor: pointer
+      transition: .6s
+      border-radius: 0
+      margin-bottom: 70px
+      
+    button:hover
+      background-color: #706d6b
+      color: #f8f8f8
+
+

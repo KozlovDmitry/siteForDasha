@@ -7,7 +7,7 @@
   font-family: 'logo2';
   src: url("../fonts/logoFont2.ttf"); }
 
-.flexCenter, header .wrapMenu .logo, header .wrapMenu .wrap div, header .headerText, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
+.flexCenter, header .wrapMenu .logo, header .wrapMenu .wrap div, header .headerText, .main .myForm, .main .myForm .wrapMyForm, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center; }
 
-.flex, header .wrapMenu, header .wrapMenu .wrap .menu a, .main, .main .wrapAlbums, .main .wrapAlbums .wrapAlbum .wrapText, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
+.flex, header .wrapMenu, header .wrapMenu .wrap .menu a, .main, .main .myForm .wrapMyForm .wrap, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -137,54 +137,115 @@ header {
     color: #706d6b;
     font-weight: 300;
     text-align: center;
-    margin: 70px 0; }
-  .main .wrapAlbums {
-    flex-wrap: wrap;
-    justify-content: center; }
-    .main .wrapAlbums .wrapAlbum {
-      margin: 50px; }
-      .main .wrapAlbums .wrapAlbum .wrapPhoto {
-        display: block;
-        overflow: hidden;
-        width: 360px;
-        height: 360px;
-        trasition: .6s; }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto .photo {
-          width: 360px;
-          height: 360px;
-          transition: .6s; }
-          .main .wrapAlbums .wrapAlbum .wrapPhoto .photo .gradient {
-            display: none; }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto .album1 {
-          background: url(../img/wedding/test1/1.jpg) no-repeat center;
-          background-size: cover; }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto .album2 {
-          background: url(../img/wedding/test2/1.jpg) no-repeat center;
-          background-size: cover; }
-      .main .wrapAlbums .wrapAlbum .wrapPhoto:hover .photo {
-        transform: scale(1.1); }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto:hover .photo .gradient {
-          display: block;
-          width: 360px;
-          height: 360px;
-          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%); }
-      .main .wrapAlbums .wrapAlbum .wrapText {
-        flex-direction: column;
-        background-color: white;
-        padding-bottom: 30px; }
-        .main .wrapAlbums .wrapAlbum .wrapText h2 {
+    margin-top: 100px;
+    margin-bottom: 0; }
+  .main p {
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #706d6b;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 70px; }
+  .main .myForm {
+    flex-direction: column; }
+    .main .myForm .wrapMyForm {
+      align-items: stretch; }
+      .main .myForm .wrapMyForm .wrap {
+        flex-direction: column; }
+        .main .myForm .wrapMyForm .wrap input {
           font-family: "Roboto";
           font-size: 18px;
-          color: #706d6b;
-          font-weight: 400;
-          text-align: center; }
-        .main .wrapAlbums .wrapAlbum .wrapText .date {
-          font-family: "Roboto";
-          font-size: 12px;
-          color: #706d6b;
-          font-weight: 300;
-          font-style: italic;
-          text-align: center; }
+          color: black;
+          font-weight: 100;
+          border: none;
+          padding: 15px;
+          margin: 10px;
+          width: 400px;
+          background-color: #f8f8f8;
+          border: thin solid #706d6b;
+          transition: .6s; }
+        .main .myForm .wrapMyForm .wrap input:focus {
+          outline: none; }
+        .main .myForm .wrapMyForm .wrap input:nth-child(1) {
+          margin-top: 0; }
+        .main .myForm .wrapMyForm .wrap input:nth-child(4) {
+          margin-bottom: 0; }
+        .main .myForm .wrapMyForm .wrap input::-webkit-input-placeholder {
+          opacity: 1;
+          transition: .6s;
+          color: black; }
+        .main .myForm .wrapMyForm .wrap input::-moz-placeholder {
+          opacity: 1;
+          transition: .6s;
+          color: black; }
+        .main .myForm .wrapMyForm .wrap input:-moz-placeholder {
+          opacity: 1;
+          transition: .6s;
+          color: black; }
+        .main .myForm .wrapMyForm .wrap input:-ms-input-placeholder {
+          opacity: 1;
+          transition: .6s;
+          color: black; }
+        .main .myForm .wrapMyForm .wrap input:focus::-webkit-input-placeholder {
+          opacity: 0; }
+        .main .myForm .wrapMyForm .wrap input:focus::-moz-placeholder {
+          opacity: 0; }
+        .main .myForm .wrapMyForm .wrap input:focus:-moz-placeholder {
+          opacity: 0; }
+        .main .myForm .wrapMyForm .wrap input:focus:-ms-input-placeholder {
+          opacity: 0; }
+      .main .myForm .wrapMyForm textarea {
+        width: 400px;
+        border: none;
+        font-family: "Roboto";
+        font-size: 18px;
+        color: black;
+        font-weight: 100;
+        resize: none;
+        padding: 15px;
+        margin-right: 10px;
+        background-color: #f8f8f8;
+        border: thin solid #706d6b; }
+      .main .myForm .wrapMyForm textarea::-webkit-input-placeholder {
+        color: black;
+        transition: .6s; }
+      .main .myForm .wrapMyForm textarea::-moz-placeholder {
+        color: black;
+        transition: .6s; }
+      .main .myForm .wrapMyForm textarea:-moz-placeholder {
+        color: black;
+        transition: .6s; }
+      .main .myForm .wrapMyForm textarea:-ms-input-placeholder {
+        color: black;
+        transition: .6s; }
+      .main .myForm .wrapMyForm textarea:focus::-webkit-input-placeholder {
+        opacity: 0; }
+      .main .myForm .wrapMyForm textarea:focus::-moz-placeholder {
+        opacity: 0; }
+      .main .myForm .wrapMyForm textarea:focus:-moz-placeholder {
+        opacity: 0; }
+      .main .myForm .wrapMyForm textarea:focus:-ms-input-placeholder {
+        opacity: 0; }
+      .main .myForm .wrapMyForm textarea:focus {
+        outline: none; }
+    .main .myForm button {
+      background-color: #f8f8f8;
+      font-family: "Roboto";
+      font-size: 18px;
+      color: black;
+      font-weight: 100;
+      padding: 15px;
+      width: 300px;
+      margin: 20px;
+      border: none;
+      border: thin solid #706d6b;
+      cursor: pointer;
+      transition: .6s;
+      border-radius: 0;
+      margin-bottom: 70px; }
+    .main .myForm button:hover {
+      background-color: #706d6b;
+      color: #f8f8f8; }
 
 footer {
   flex-direction: column;

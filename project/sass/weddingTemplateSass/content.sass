@@ -1,0 +1,77 @@
+body
+  position: relative
+
+.main 
+  @extend .flex
+  flex-direction: column
+  
+  h1
+    text-align: center
+    +font($mainFont, 26px, #706d6b, 400)
+      
+  p
+    text-align: center
+    +font($mainFont, 18px, #706d6b, 100)
+    margin-bottom: 50px
+    padding: 0 150px
+    line-height: 1.3em
+    
+  .wrapAllSmallPhoto 
+    @extend .flex
+    flex-wrap: wrap
+    justify-content: center
+    
+    .wrapSmallPhoto
+      position: relative
+      overflow: hidden
+      margin: 3px
+    
+      .smallPhoto
+        position: absolute
+        display: block
+        cursor: pointer
+        transition: .6s
+
+    .wrapSmallPhoto:hover
+      
+      .smallPhoto 
+        transform: scale(1.1)
+    
+.wrapBigPhoto
+  position: fixed
+  height: 100vh
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 3
+  @extend .flexCenter
+  background-color: rgba(0,0,0,.8)
+  
+  .wrapArrow 
+    width: 95%
+    height: 95%
+    @extend .flex
+    justify-content: space-between
+    align-items: stretch
+    position: relative
+    
+    .arrowLeft, .arrowRight
+      @extend .flexCenter
+      font-size: 30px
+      padding: 30px
+      margin: 5px
+      color: white
+      transition: .6s
+
+    .arrowLeft:hover, .arrowRight:hover, .cross:hover
+      box-shadow: 0 0 10px 1px black
+    
+    .cross
+      font-size: 30px
+      position: absolute
+      margin: 5px
+      padding: 28px
+      color: white
+      top: 0 
+      right: 0
+      transition: .6s

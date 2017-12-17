@@ -11,8 +11,6 @@ $(function () {
       numberPhoto = 1;
     }
       var $photo = $('<div / >').addClass('sliderHeader')
-        .width($('header').width())
-        .height($('header').height() * 1.2)
         .css({
           background: 'url(\'img/header/' + numberPhoto + '.jpg\') no-repeat center',
           backgroundSize: 'cover',
@@ -20,7 +18,9 @@ $(function () {
           top: '0',
           left: '0',
           zIndex: '-1',
-          opacity: '0'
+          opacity: '0',
+          width: '100%',
+          height: '100%'
         });
     
     $('header').append($photo);

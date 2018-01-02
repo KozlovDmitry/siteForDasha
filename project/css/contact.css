@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700&subset=cyrillic-ext';
 @font-face {
   font-family: 'logo';
   src: url("../fonts/logoFontTtf.ttf"); }
@@ -7,7 +7,7 @@
   font-family: 'logo2';
   src: url("../fonts/logoFont2.ttf"); }
 
-.flexCenter, header .wrapMenu .logo, header .wrapMenu .wrap div, header .headerText, .main .myForm, .main .myForm .wrapMyForm, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
+.flexCenter, header .wrapMenu .logo, header .wrapMenu .social, header .wrapMenu .social div, .main .myForm, .main .myForm .wrapMyForm, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -16,14 +16,15 @@
   justify-content: center;
   align-items: center; }
 
-.flex, header .wrapMenu, header .wrapMenu .wrap .menu a, .main, .main .myForm .wrapMyForm .wrap, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
+.flex, header .wrapMenu, header .wrapMenu .menu a,
+header .wrapMenu .menu .galleryButton, .main, .main .myForm .wrapMyForm .wrap, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex; }
 
-.flexSA, header .wrapMenu .wrap, header .wrapMenu .wrap .menu, header .wrapMenu .wrap .social, header .wrapMenu .langWrap {
+.flexSA, header .wrapMenu .menu {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -42,14 +43,29 @@ body {
 
 header {
   position: relative;
-  overflow: hidden; }
+  height: 750px; }
+  header .desktop {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex; }
+  header .mobile {
+    display: none; }
+  header .menuButton {
+    display: none; }
   header .wrapMenu {
     font-family: "Roboto";
     font-size: 16px;
     color: #706d6b;
     font-weight: 100;
-    background-color: rgba(255, 255, 255, 0.5);
-    align-items: center; }
+    background-color: white;
+    justify-content: space-between;
+    opacity: .65;
+    position: relative;
+    flex-direction: row; }
+    header .wrapMenu .menuButton {
+      display: none; }
     header .wrapMenu a {
       text-decoration: none;
       color: #706d6b; }
@@ -58,74 +74,126 @@ header {
       font-size: 45px;
       color: black;
       font-weight: 700;
-      margin: 25px 25px 25px 50px;
-      transition: .6s; }
+      margin: 25px;
+      transition: .6s;
+      text-shadow: 2px 2px 0px #706d6b; }
     header .wrapMenu .logo:hover {
       color: #dc6f26;
-      transform: scale(1.1); }
+      transform: scale(1.1);
+      text-shadow: 2px 2px 0px black; }
     header .wrapMenu a:hover {
       text-decoration: none; }
-    header .wrapMenu .wrap {
-      align-items: center;
-      flex: 1;
-      align-self: stretch; }
-      header .wrapMenu .wrap .menu {
-        justify-content: space-evenly;
-        flex: .9;
-        align-self: stretch; }
-        header .wrapMenu .wrap .menu a {
-          justify-content: center;
-          align-items: center;
-          align-self: stretch;
-          flex-grow: 1;
-          transition: .5s ease;
-          z-index: 2;
-          cursor: pointer; }
-        header .wrapMenu .wrap .menu a:visited {
-          color: #706d6b; }
-        header .wrapMenu .wrap .menu a:hover {
-          box-shadow: 0 0 10px 1px #706d6b; }
-      header .wrapMenu .wrap .social {
-        display: none; }
-        header .wrapMenu .wrap .social a {
-          color: #706d6b;
-          font-size: 16px;
-          margin: 0 7px; }
-        header .wrapMenu .wrap .social a:hover {
-          text-decoration: none; }
-      header .wrapMenu .wrap div {
+    header .wrapMenu .menu {
+      flex: .9;
+      align-self: stretch;
+      flex-direction: row; }
+      header .wrapMenu .menu a,
+      header .wrapMenu .menu .galleryButton {
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        flex-grow: 1;
+        transition: .5s ease;
+        z-index: 2;
+        cursor: pointer; }
+      header .wrapMenu .menu a:visited {
+        color: #706d6b; }
+      header .wrapMenu .menu a:hover, header .wrapMenu .menu .galleryButton:hover {
+        box-shadow: 0 0 10px 1px #706d6b; }
+      header .wrapMenu .menu .galleryButton {
+        position: relative; }
+        header .wrapMenu .menu .galleryButton .galleryBar {
+          position: absolute;
+          top: 121px;
+          right: 0; }
+          header .wrapMenu .menu .galleryButton .galleryBar a {
+            padding: 10px; }
+    header .wrapMenu .social {
+      align-self: stretch;
+      margin-right: 25px;
+      margin-top: 0; }
+      header .wrapMenu .social a {
+        color: black;
+        font-size: 17px;
+        margin: 0 7px;
+        transition: .6s; }
+      header .wrapMenu .social a:hover {
+        text-decoration: none;
+        color: #dc6f26; }
+      header .wrapMenu .social div {
         margin: 0 15px;
         text-align: center; }
-    header .wrapMenu .langWrap {
-      position: relative;
-      font-weight: 400;
-      border: thin solid;
-      border-radius: 20px;
-      margin-right: 20px;
-      z-index: 2;
-      cursor: pointer; }
-      header .wrapMenu .langWrap div {
-        margin: 3px 12px; }
-      header .wrapMenu .langWrap .carrier {
-        position: absolute;
-        left: -11px;
-        top: -2px;
-        background-color: rgba(100, 100, 100, 0.4);
-        height: 23px;
-        width: 77px;
-        border-radius: 15px;
-        transition: .6s; }
-  header .headerText {
-    font-family: "logo";
-    font-size: 55px;
-    color: black;
-    font-weight: 700;
-    transform: rotate(-30deg);
-    padding: 15%;
-    text-shadow: 0 0 2px #9c9a98;
-    overflow: hidden; }
-  header .russian {
-    opacity: 0; }
+    header .wrapMenu .mobile {
+      display: none; }
+
+@media only screen and (max-width: 992px) {
+  header .desktop {
+    display: none; }
+  header .mobile {
+    display: block; }
+  header .wrapMenu {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: #706d6b;
+    font-weight: 100;
+    background-color: white;
+    opacity: .65;
+    position: fixed;
+    width: 12px;
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    box-shadow: 11px 0 15px 1px black;
+    transition: .6s; }
+    header .wrapMenu .menu {
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: .3; }
+      header .wrapMenu .menu .galleryButton .galleryBar {
+        left: 160px;
+        top: -32px; }
+    header .wrapMenu .mobile {
+      display: block; }
+    header .wrapMenu .mobileLine {
+      width: 80%;
+      height: 1px;
+      background-color: #9b9b9b;
+      border-bottom: 1px solid #F4F4F4; }
+    header .wrapMenu .social {
+      margin-right: 0;
+      margin-top: 25px; }
+      header .wrapMenu .social a {
+        font-size: 22px;
+        margin: 0 12px; }
+    header .wrapMenu .mobileInvis {
+      display: none;
+      transition: .6s;
+      opacity: 0; }
+    header .wrapMenu .menuButton {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 34px;
+      left: 12px;
+      width: 20px;
+      height: 70px;
+      font-size: 25px;
+      background-color: white;
+      box-shadow: 14px 0 15px 1px black;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: .6s;
+      cursor: pointer; } }
+
+header {
+  height: inherit; }
 
 .main {
   min-height: 100vh;
@@ -247,6 +315,21 @@ header {
       background-color: #706d6b;
       color: #f8f8f8; }
 
+@media only screen and (max-width: 992px) {
+  .main .myForm .wrapMyForm {
+    flex-direction: column;
+    align-items: center; }
+    .main .myForm .wrapMyForm .wrap {
+      align-items: center;
+      margin-bottom: 30px; }
+      .main .myForm .wrapMyForm .wrap input {
+        width: 280px; }
+    .main .myForm .wrapMyForm textarea {
+      width: 280px;
+      margin-right: 0; }
+  .main .myForm button {
+    width: 200px; } }
+
 footer {
   flex-direction: column;
   font-family: "Roboto";
@@ -259,10 +342,12 @@ footer {
     footer .followSection .wrap {
       flex-direction: column; }
       footer .followSection .wrap h2 {
-        font-weight: 400; }
+        text-align: center;
+        font-size: 30px;
+        font-weight: 300; }
       footer .followSection .wrap a {
         font-family: "Roboto";
-        font-size: 18px;
+        font-size: 14px;
         color: #706d6b;
         font-weight: 100;
         text-decoration: none;
@@ -294,22 +379,26 @@ footer {
         color: black;
         font-weight: 700;
         margin: 25px 0;
-        transition: .6s; }
+        transition: .6s;
+        text-shadow: 2px 2px 0px #706d6b; }
       footer .infoSocial .wrapInfoSocial .logo:hover {
         color: #dc6f26;
-        transform: scale(1.1); }
+        transform: scale(1.1);
+        text-shadow: 2px 2px 0px black; }
       footer .infoSocial .wrapInfoSocial a:hover {
         text-decoration: none; }
-      footer .infoSocial .wrapInfoSocial .wrapInfo div {
-        font-size: 16px;
-        margin: 0 10px; }
-        footer .infoSocial .wrapInfoSocial .wrapInfo div .dot {
-          margin: 0;
-          height: 4px;
-          width: 4px;
-          background-color: #706d6b;
-          margin: 0 5px;
-          border-radius: 50%; }
+      footer .infoSocial .wrapInfoSocial .wrapInfo {
+        margin-bottom: 0; }
+        footer .infoSocial .wrapInfoSocial .wrapInfo div {
+          font-size: 16px;
+          margin: 0 10px; }
+          footer .infoSocial .wrapInfoSocial .wrapInfo div .dot {
+            margin: 0;
+            height: 4px;
+            width: 4px;
+            background-color: #706d6b;
+            margin: 0 5px;
+            border-radius: 50%; }
       footer .infoSocial .wrapInfoSocial .social a {
         color: #706d6b;
         font-size: 18px;
@@ -321,3 +410,13 @@ footer {
     footer .infoSocial .wrapCopyRight {
       padding: 20px 0;
       font-size: 9px; }
+
+@media only screen and (max-width: 992px) {
+  footer .followSection {
+    padding: 50px 10px; }
+  footer .infoSocial {
+    padding: 0 10px; }
+    footer .infoSocial .wrapInfoSocial {
+      flex-direction: column; }
+      footer .infoSocial .wrapInfoSocial .wrapInfo {
+        margin-bottom: 30px; } }

@@ -8,7 +8,13 @@
   h1
     +font($mainFont, 30px, #706d6b, 300)
     text-align: center
-    margin: 70px 0
+    margin-top: 60px
+    
+  p
+    +font($mainFont, 18px, #706d6b, 100)
+    margin-bottom: 70px
+    padding: 0 150px
+    line-height: 1.3em
     
   .wrapAlbums
     @extend .flex
@@ -68,3 +74,14 @@
           +font($mainFont, 12px, #706d6b, 300)
           font-style: italic
           text-align: center
+
+          
+@media only screen and (max-width: 992px)
+  .main
+    p
+      padding: 0 20px
+      
+    .wrapAlbums 
+      .wrapAlbum 
+        margin: 50px 10px
+  

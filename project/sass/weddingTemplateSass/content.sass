@@ -4,15 +4,17 @@ body
 .main 
   @extend .flex
   flex-direction: column
+  background-color: #f8f8f8
   
   h1
     text-align: center
-    +font($mainFont, 26px, #706d6b, 400)
+    +font($mainFont, 26px, #706d6b, 300)
+    margin-top: 60px
       
   p
     text-align: center
     +font($mainFont, 18px, #706d6b, 100)
-    margin-bottom: 50px
+    margin-bottom: 70px
     padding: 0 150px
     line-height: 1.3em
     
@@ -47,6 +49,12 @@ body
   @extend .flexCenter
   background-color: rgba(0,0,0,.8)
   
+  .spinner
+    position: absolute
+    left: 48%
+    top: 50%
+    color: white
+  
   .wrapArrow 
     width: 95%
     height: 95%
@@ -75,3 +83,8 @@ body
       top: 0 
       right: 0
       transition: .6s
+        
+@media only screen and (max-width: 992px)
+  .main 
+    p
+      padding: 0 20px

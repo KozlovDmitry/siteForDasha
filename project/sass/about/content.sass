@@ -1,59 +1,25 @@
 section 
   @extend .flexCenter
-  padding: 50px 100px
+  padding: 0 100px 50px 100px
   font-family: $mainFont, serif
   color: #706d6b
-  
-.weddingSection
-  flex-direction: column
-  padding: 50px 200px
-  
-  .wrap
-    @extend .flexCenter
-    flex-direction: column
-  
-    h2
-      text-align: center
-      font-weight: 400
 
-    .text
-      font-weight: 100
-      line-height: 1.5em
-
-    a
-      text-decoration: none
-      +font($mainFont, 18px, #706d6b, 400)
-      position: relative
-    
-    a:before
-      content: ''
-      position: absolute
-      height: 2px
-      width: 0
-      bottom: -3px
-      right: 0
-      transition: .6s
-      background-color: #706d6b
-      
-    a:hover:before
-      width: 100%
-      left: 0
-    
 .aboutSection
   .wrap
     @extend .flexSA
     background-color: #f8f8f8
     align-items: center
-    padding: 50px 0
-    
+    padding: 60px 0
+    margin-top: -70px
+    position: relative
+
     .info 
-      margin-bottom: 0
       @extend .flexCenter
       flex-direction: column
       width: 40%
       font-weight: 100
       line-height: 1.5em
-      
+
       a
         text-decoration: none
         +font($mainFont, 18px, #706d6b, 400)
@@ -68,31 +34,25 @@ section
         right: 0
         transition: .6s
         background-color: #706d6b
-
+        
       a:hover:before
         width: 100%
         left: 0
       
       h2
-        text-align: center
         font-weight: 400
-      
+
     .photo
-      margin: 0
       background: url('../img/about/about.jpg') no-repeat center
       background-size: cover
       width: 350px
       height: 550px
       
 @media only screen and (max-width: 992px)
-  
-  section
-    padding: 50px 20px
+  section 
+    padding: 0 10px 50px 10px 
     
-  .weddingSection 
-    padding: 50px 20px
-  
-  .aboutSection 
+  .aboutSection
     .wrap 
       flex-direction: column
       

@@ -13,10 +13,12 @@ footer
       flex-direction: column
       
       h2
-        font-weight: 400
+        text-align: center
+        font-size: 30px
+        font-weight: 300
         
       a
-        +font($mainFont, 18px, #706d6b, 100)
+        +font($mainFont, 14px, #706d6b, 100)
         text-decoration: none
         position: relative
         
@@ -53,15 +55,18 @@ footer
         +font('logo', 45px, black, 700)
         margin: 25px 0
         transition: .6s
+        text-shadow: 2px 2px 0px #706d6b
         
       .logo:hover
         color: #dc6f26
         transform: scale(1.1)
+        text-shadow: 2px 2px 0px black
 
       a:hover
         text-decoration: none
       
       .wrapInfo
+        margin-bottom: 0
         @extend .flexCenter
         
         div
@@ -95,4 +100,18 @@ footer
       padding: 20px 0
       font-size: 9px
       
+      
+@media only screen and (max-width: 992px)
+  footer
+    .followSection 
+      padding: 50px 10px
+      
+    .infoSocial 
+      padding: 0 10px
+      
+      .wrapInfoSocial 
+        flex-direction: column
+        
+        .wrapInfo 
+          margin-bottom: 30px
   

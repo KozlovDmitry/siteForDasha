@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Litheya</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animateWeddingGallery.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+  <script src="js/commonJs/menuScroll.js" defer></script>
+  <script src="js/commonJs/menuGellery.js" defer></script>
   <script src="js/slideHeader/slideHeader.js" defer></script>
-  <script src="js/langTumbler/langTumbler.js" defer></script>
-  <script src="js/scroll/slowScroll.js" defer></script>
-
+  <script src="js/showContent/test.js" defer></script>
+  <script src="js/main/showContent.js" defer></script>
 </head>
 
 <body>
@@ -18,65 +20,45 @@
   <header>
 
     <div class="wrapMenu">
-      <a class="logo" href="#">
+      <div class="menuButton fa fa-angle-right"></div>
+     
+      <a class="logo mobileInvis" href="#">
         Litheya
       </a>
 
-      <div class="wrap">
+      <div class="mobile mobileLine mobileInvis"></div>
 
-        <div class="menu">
+      <div class="menu mobileInvis">
 
-          <a class="about english">
+          <a class="about english" href="pages/about.html">
             ABOUT
           </a>
-
-          <a class="wedding english" href="pages/weddingGallery.html">
-            WEDDING&amp;LOVESTORIES
-          </a>
-
-          <a class="family english">
-            FAMILLY&amp;PREGNANCY
-          </a>
+          
+          <div class="galleryButton english">
+            GALLERY
+          </div>
 
           <a class="contact english" href="pages/contact.html">
             CONTACT
           </a>
 
-          <a class="about russian" id="invisible">
-            ОБО МНЕ
-          </a>
-
-          <a class="wedding russian" href="pages/weddingGallery.html" id="invisible">
-            СВАДЬБА И ИСТОРИИ ЛЮБВИ
-          </a>
-
-          <a class="family russian" id="invisible">
-            СЕМЕЙНЫЕ ФОТОГРАФИИ
-          </a>
-
-          <a class="contact russian" id="invisible" href="pages/contact.html">
-            КОНТАКТЫ
-          </a>
-
         </div>
 
+      <div class="mobile mobileLine mobileInvis"></div>
+
+      
+      <div class="social mobileInvis">
+
+        <a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/daria.drozhzhina/?hl=ru" target="_blank"></a>
+
+        <a class="fa fa-vk" aria-hidden="true" href="https://vk.com/loroka" target="_blank"></a>
+
+        <a class="fa fa-facebook" aria-hidden="true" href="https://vk.com/loroka" target="_blank"></a>
+
       </div>
 
-      <div class="langWrap">
-        <div class="en">English</div>
-        <div class="ru">Русский</div>
-        <div class="carrier"></div>
-      </div>
-
     </div>
-
-    <div class="headerText english">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex repellat porro officiis consequuntur!
-    </div>
-
-    <div class="headerText russian" id="invisible">
-      Хорошие фотографиии, как хорошие шутки. Если вы их объясняете, они уже не так хороши.
-    </div>
+    
   </header>
 
   <section class="weddingSection">
@@ -106,7 +88,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo aliquid sapiente adipisci nostrum, modi exercitationem provident iusto, aut debitis facilis nulla at praesentium. Illo ab quam doloribus consequuntur nihil fugiat. Tempore voluptatem aut quae quas deleniti optio quod, totam, dolorum, enim ipsa ut suscipit. <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis corporis, alias soluta maxime, suscipit rerum. Repellat vel quis iusto beatae aliquid, ut molestiae veritatis at?<br><br><br><br>
         </div>
 
-        <a href="#">
+        <a href="pages/contact.html">
             CONTACT ME
           </a>
       </div>

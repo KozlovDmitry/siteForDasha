@@ -1,6 +1,6 @@
 $(function(){
-  $('.wrapAlbum').addClass('hidden').viewportChecker({
+  $('section').addClass('hidden').viewportChecker({
     classToAdd: 'visible animated fadeInDown',
-    offset: 50
+    offset: 100
   });
 });

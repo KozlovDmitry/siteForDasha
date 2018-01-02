@@ -7,7 +7,7 @@
   font-family: 'logo2';
   src: url("../fonts/logoFont2.ttf"); }
 
-.flexCenter, header .wrapMenu .logo, header .wrapMenu .social, header .wrapMenu .social div, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
+.flexCenter, header .wrapMenu .logo, header .wrapMenu .social, header .wrapMenu .social div, section, .aboutSection .wrap .info, footer, footer .followSection, footer .followSection .wrap, footer .infoSocial .wrapInfoSocial .logo, footer .infoSocial .wrapInfoSocial .wrapInfo, footer .infoSocial .wrapInfoSocial .wrapInfo div, footer .infoSocial .wrapInfoSocial .social, footer .infoSocial .wrapCopyRight {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -17,14 +17,14 @@
   align-items: center; }
 
 .flex, header .wrapMenu, header .wrapMenu .menu a,
-header .wrapMenu .menu .galleryButton, .main, .main .wrapAlbums, .main .wrapAlbums .wrapAlbum .wrapText, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
+header .wrapMenu .menu .galleryButton, footer .infoSocial, footer .infoSocial .wrapInfoSocial {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex; }
 
-.flexSA, header .wrapMenu .menu {
+.flexSA, header .wrapMenu .menu, .aboutSection .wrap {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -193,80 +193,64 @@ header {
       cursor: pointer; } }
 
 header {
-  height: inherit; }
+  height: 700px;
+  background: url("../img/about/headerBackground.jpg") no-repeat center;
+  background-size: cover; }
 
-.main {
-  min-height: 100vh;
+section {
+  padding: 0 100px 50px 100px;
+  font-family: "Roboto", serif;
+  color: #706d6b; }
+
+.aboutSection .wrap {
   background-color: #f8f8f8;
-  flex-direction: column; }
-  .main h1 {
-    font-family: "Roboto";
-    font-size: 30px;
-    color: #706d6b;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 60px; }
-  .main p {
-    font-family: "Roboto";
-    font-size: 18px;
-    color: #706d6b;
+  align-items: center;
+  padding: 60px 0;
+  margin-top: -70px;
+  position: relative; }
+  .aboutSection .wrap .info {
+    flex-direction: column;
+    width: 40%;
     font-weight: 100;
-    margin-bottom: 70px;
-    padding: 0 150px;
-    line-height: 1.3em; }
-  .main .wrapAlbums {
-    flex-wrap: wrap;
-    justify-content: center; }
-    .main .wrapAlbums .wrapAlbum {
-      margin: 50px; }
-      .main .wrapAlbums .wrapAlbum .wrapPhoto {
-        display: block;
-        overflow: hidden;
-        width: 360px;
-        height: 360px;
-        trasition: .6s; }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto .photo {
-          width: 360px;
-          height: 360px;
-          transition: .6s; }
-          .main .wrapAlbums .wrapAlbum .wrapPhoto .photo .gradient {
-            display: none; }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto .album1 {
-          background: url(../img/wedding/test1/1.jpg) no-repeat center;
-          background-size: cover; }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto .album2 {
-          background: url(../img/wedding/test2/1.jpg) no-repeat center;
-          background-size: cover; }
-      .main .wrapAlbums .wrapAlbum .wrapPhoto:hover .photo {
-        transform: scale(1.1); }
-        .main .wrapAlbums .wrapAlbum .wrapPhoto:hover .photo .gradient {
-          display: block;
-          width: 360px;
-          height: 360px;
-          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%); }
-      .main .wrapAlbums .wrapAlbum .wrapText {
-        flex-direction: column;
-        background-color: white;
-        padding-bottom: 30px; }
-        .main .wrapAlbums .wrapAlbum .wrapText h2 {
-          font-family: "Roboto";
-          font-size: 18px;
-          color: #706d6b;
-          font-weight: 400;
-          text-align: center; }
-        .main .wrapAlbums .wrapAlbum .wrapText .date {
-          font-family: "Roboto";
-          font-size: 12px;
-          color: #706d6b;
-          font-weight: 300;
-          font-style: italic;
-          text-align: center; }
+    line-height: 1.5em; }
+    .aboutSection .wrap .info a {
+      text-decoration: none;
+      font-family: "Roboto";
+      font-size: 18px;
+      color: #706d6b;
+      font-weight: 400;
+      position: relative; }
+    .aboutSection .wrap .info a:before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 0;
+      bottom: -3px;
+      right: 0;
+      transition: .6s;
+      background-color: #706d6b; }
+    .aboutSection .wrap .info a:hover:before {
+      width: 100%;
+      left: 0; }
+    .aboutSection .wrap .info h2 {
+      font-weight: 400; }
+  .aboutSection .wrap .photo {
+    background: url("../img/about/about.jpg") no-repeat center;
+    background-size: cover;
+    width: 350px;
+    height: 550px; }
 
 @media only screen and (max-width: 992px) {
-  .main p {
-    padding: 0 20px; }
-  .main .wrapAlbums .wrapAlbum {
-    margin: 50px 10px; } }
+  section {
+    padding: 0 10px 50px 10px; }
+  .aboutSection .wrap {
+    flex-direction: column; }
+    .aboutSection .wrap .info {
+      width: 80%;
+      margin-bottom: 30px; }
+    .aboutSection .wrap .photo {
+      width: 330px;
+      margin: 0 10px; } }
 
 footer {
   flex-direction: column;
